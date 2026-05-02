@@ -1,0 +1,32 @@
+[
+  {
+    "name": "EEP-DB (Database Engine)",
+    "description": "Building a storage engine from scratch with page-based storage, buffer pool manager, and RAII-based PageGuards for safe memory handling. Focused on correctness, eviction policies, and API design for future concurrency.",
+    "stack": ["C++", "Database Internals", "Buffer Pool", "RAII", "Systems"],
+    "github": "https://github.com/beshirr/EEP-DB"
+  },
+  {
+    "name": "Custom Memory Allocator",
+    "description": "Implemented a malloc-like allocator using sbrk/mmap with 16-byte alignment, block splitting, and coalescing. Designed for performance and low fragmentation.",
+    "stack": ["C", "Memory Management", "Systems", "Linux"],
+    "github": "https://github.com/beshirr/memo_alloc"
+  },
+  {
+    "name": "Unipost (Posts Aggregator Backend)",
+    "description": "Backend system that aggregates posts from multiple platforms using automated fetchers. Built with Django REST Framework.",
+    "stack": ["Python", "Django", "REST API"],
+    "github": "https://github.com/beshirr/unipost"
+  },
+  {
+    "name": "CPU Scheduling Simulator",
+    "description": "Simulates multiple CPU scheduling algorithms with performance metrics and test scenarios. Focused on correctness, visualization, and extensibility.",
+    "stack": ["Java", "Algorithms", "Operating Systems"],
+    "github": "https://github.com/beshirr/cpu-scheduler"
+  },
+  {
+    "name": "Quiz Generator Platform",
+    "description": "Backend service that generates quizzes dynamically using AI models, with structured APIs and evaluation logic.",
+    "stack": ["Python", "FastAPI", "AI Integration"],
+    "github": "https://github.com/beshirr/quiz-generator"
+  }
+]

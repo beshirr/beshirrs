@@ -10,7 +10,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Beshirr.dev",
+  title: "beshirr.dev",
   description: "Software Engineer focused on systems / backend."
 };
 

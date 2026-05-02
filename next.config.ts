@@ -8,8 +8,8 @@ const nextConfig: NextConfig = {
     unoptimized: true
   },
   trailingSlash: true,
-  basePath: isProd ? "/beshirrs" : "",
-  assetPrefix: isProd ? "/beshirrs/" : ""
+  basePath: isProd ? "/beshirr.github.io" : "",
+  assetPrefix: isProd ? "/beshirr.github.io/" : ""
 };
 
 export default nextConfig;

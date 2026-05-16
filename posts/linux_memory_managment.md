@@ -1,5 +1,5 @@
 ---
-title: "MAs, sbrk(), and mmap(): How Linux Actually Manages Process Memory"
+title: "VMAs, sbrk(), and mmap(): How Linux Actually Manages Process Memory"
 date: "2026-05-17"
 excerpt: "A deep dive into sbrk, mmap, and how the kernel actually manages process memory."
 ---
@@ -208,8 +208,8 @@ Properties of `mmap()`:
 * allocations do not need to be contiguous
 
 ---
-# Which syscall does moderen allocators actually use? 
-modern allocators use hyprid approach, they typically use:
+# Which syscall do modern allocators actually use? 
+Modern allocators use a hybrid approach; they typically use:
 
 * `sbrk()` for small allocations
 * `mmap()` for large allocations
@@ -251,9 +251,9 @@ The key insight that finally made everything click for me was this:
 > `sbrk()` modifies an existing VMA.
 > `mmap()` creates entirely new VMAs.
 
-memory is't just one giant array of bytes.
+Memory isn't just one giant array of bytes.
 
-it's a collection of:
+It's a collection of:
 * virtual regions
 * mappings
 * permissions

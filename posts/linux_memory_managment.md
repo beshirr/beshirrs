@@ -50,11 +50,15 @@ A VMA (Virtual Memory Area) is simply a kernel data structure describing a valid
 A process typically has many VMAs:
 
 ```text
-VMA 1 → .text
-VMA 2 → .data
-VMA 3 → heap
-VMA 4 → libc.so
-VMA 5 → stack
+VMA list for a process:
+┌─────────────────────────────────────────────────────┐
+│ VMA 1: 0x400000 → 0x401000  | READ+EXEC | .text     │
+│ VMA 2: 0x401000 → 0x402000  | READ+WRITE| .data/.bss│
+│ VMA 3: 0x7ff000 → 0x800000  | READ+EXEC | libc.so   │
+│ VMA 4: 0x801000 → 0x802000  | READ+WRITE| libc.so   │
+│ VMA 5: 0xA00000 → 0xA10000  | READ+WRITE| heap      │
+│ VMA 6: 0x7fff000→ 0x8000000 | READ+WRITE| stack     │
+└─────────────────────────────────────────────────────┘
 ```
 
 Everything between them is just unmapped virtual space.
